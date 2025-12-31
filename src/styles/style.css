@@ -109,8 +109,9 @@ img {
 }
 .instagram {
   width: 70%;
-  margin-right: 18%;
   height: auto;
+  display: block;
+  margin-right: 18%;
 }
 /* ________TEST TEST TEST________ */
 .card {
