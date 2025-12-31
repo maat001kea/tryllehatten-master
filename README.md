@@ -48,11 +48,4 @@ npm run dev
 
 ---
 
-## (Bonus) Kort “About”-tekst til GitHub
-Du kan sætte den her under repo → **About**:
 
-**Description:** “Konceptsite/gruppeprojekt: one-page i Astro med video og motion-effekter.”  
-**Website:** https://tryllehat.netlify.app/
-
-Hvis du vil, kan jeg også skrive en ultrakort footer-linje til selve sitet (så den ikke kun står i README).
-::contentReference[oaicite:0]{index=0}
