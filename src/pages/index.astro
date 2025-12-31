@@ -176,17 +176,21 @@ import Iframe from "../components/Iframe.astro";
 <script>
   window.addEventListener("scroll", onScroll);
 
+  const progressIndicator = document.querySelector<HTMLDivElement>(".scroll_indicator");
+
   function onScroll() {
     const scrolled = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolledfactor = (scrolled / height) * 100;
-    document.querySelector(".scroll_indicator").style.width = `${scrolledfactor}%`;
+    if (progressIndicator) {
+      progressIndicator.style.width = `${scrolledfactor}%`;
+    }
   }
 
   import { animate, scroll } from "motion";
   animate("body", { opacity: [0, 1] }, { duration: 1 });
 
-  const allStandardScrollSection = document.querySelectorAll(".standard_scroll_section");
+  const allStandardScrollSection = document.querySelectorAll<HTMLElement>(".standard_scroll_section");
 
   allStandardScrollSection.forEach((eachSection) => {
     scroll(animate(eachSection, { scale: [0, 1, 1, 0] }, { ease: "linear" }), {
@@ -197,7 +201,7 @@ import Iframe from "../components/Iframe.astro";
 
   // Counter til tal - Tak til gemini for koden//
 
-  function animateCounter(element, start, end, duration) {
+  function animateCounter(element: HTMLElement, start: number, end: number, duration: number) {
     const range = end - start;
     const increment = range / (duration / 16); // Approx 60fps
     let current = start;
@@ -216,16 +220,20 @@ import Iframe from "../components/Iframe.astro";
     updateCounter();
   }
 
-  const counters = document.querySelectorAll(".counter");
-  const animatedFlags = new WeakMap(); // Keep track of animated elements
+  const counters = document.querySelectorAll<HTMLElement>(".counter");
+  const animatedFlags = new WeakMap<HTMLElement, boolean>(); // Keep track of animated elements
 
   // Set up Intersection Observer
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        const element = entry.target;
+        const element = entry.target as HTMLElement;
         if (entry.isIntersecting && !animatedFlags.get(element)) {
-          const target = parseInt(element.getAttribute("data-target"), 10);
+          const targetAttribute = element.getAttribute("data-target");
+          if (!targetAttribute) {
+            return;
+          }
+          const target = parseInt(targetAttribute, 10);
           animatedFlags.set(element, true); // Mark as animated
           animateCounter(element, 0, target, 1000); // Animate from 0 to target in 2 seconds
         }
