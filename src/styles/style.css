@@ -1,8 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 #myElement {
   position: absolute;
   cursor: url("/img/Tryllestav.svg"), auto;
   width: 100px;
-  height: 100px;
+  height: auto;
 }
 
 #myElement:active {
@@ -88,9 +93,9 @@ a {
 }
 @media (min-width: 500px) {
   main {
-      max-width: 60%;
-      margin: auto;
-    }
+    max-width: 60%;
+    margin: auto;
+  }
 }
 body {
   background-color: #fffafa;
@@ -103,7 +108,9 @@ img {
   margin: auto;
 }
 .instagram {
-  width: 100%;
+  width: 70%;
+  margin-right: 18%;
+  height: auto;
 }
 /* ________TEST TEST TEST________ */
 .card {
@@ -183,21 +190,17 @@ img {
     font-size: 64px;
   }
 
- h2 {
-  font-size: 50px;
+  h2 {
+    font-size: 50px;
   }
-/* p {
+  /* p {
 
 }
 h4 {
   
 }*/
-/* main {
+  /* main {
   margin: auto;
   display: block;
 } */
-
-
-
-
 }

@@ -115,8 +115,7 @@ nav a {
   display: flex;
   margin: auto;
   justify-content: center;
-    align-items: center;
-
+  align-items: center;
 }
 
 /* Hatfooter1: Frontmost image */
@@ -124,19 +123,19 @@ nav a {
   position: fixed;
   z-index: 1000;
   bottom: 0px;
-  width: 80%;
-  top: 140%;
+  width: 95%;
+  top: 135%;
 }
 
 /* Hatfooter2: Background image */
 .sticky-image2 {
   position: fixed;
-  z-index: -1;
+  z-index: -500;
   bottom: 0;
   width: 1600px;
   opacity: 100;
-  width: 80%;
-    top: 140%;
+  width: 95%;
+  top: 135%;
 }
 main {
   position: relative;
@@ -174,21 +173,17 @@ p {
   z-index: 1;
 }
 
-
-
 .card-container {
   position: relative;
   z-index: 10;
 }
 
-
 .stot {
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   /* Justerer højden til hele vinduets højde */
 }
-
 
 .tallet {
   display: flex;
