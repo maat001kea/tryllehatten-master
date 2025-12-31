@@ -1,3 +1,7 @@
+
+Dette repository er en kopi af det originale Tryllehat-repository fra vores gruppeprojekt.
+Kilde: https://github.com/tryllehatten1/tryllehatten.git
+
 # Astro Starter Kit: Minimal
 
 ```sh
@@ -8,40 +12,47 @@ npm create astro@latest -- --template minimal
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+# Tryllehatten – landing page (gruppeprojekt)
 
-## 🚀 Project Structure
+Live demo: https://tryllehat.netlify.app/  
+Repo: https://github.com/maat001kea/tryllehatten-master.git
 
-Inside of your Astro project, you'll see the following folders and files:
+Et konceptsite/gruppeprojekt bygget som en one-page, hvor video og motion-effekter giver en “magisk” oplevelse.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Tech
+- Astro
+- TypeScript
+- CSS
+- Netlify (deploy)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Højdepunkter
+- One-page struktur med sektioner (hero, om, mød team, m.m.)
+- Video som en del af oplevelsen
+- Motion-effekt: elementer der ser ud som om de kommer ud af en tryllehat
+- Parallax-effekt
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Min rolle
+- Hat-animationen
+- Effekten der får elementer til at poppe ud af hatten (interaction/motion)
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Team (uden navne)
+- Illustrationer (Adobe Illustrator)
+- Parallax-effekt + voiceover
+- Videoredigering
+- Video optaget i fællesskab
 
-## 🧞 Commands
+## Kør lokalt
+```bash
+npm install
+npm run dev
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## (Bonus) Kort “About”-tekst til GitHub
+Du kan sætte den her under repo → **About**:
 
-## 👀 Want to learn more?
+**Description:** “Konceptsite/gruppeprojekt: one-page i Astro med video og motion-effekter.”  
+**Website:** https://tryllehat.netlify.app/
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Hvis du vil, kan jeg også skrive en ultrakort footer-linje til selve sitet (så den ikke kun står i README).
+::contentReference[oaicite:0]{index=0}
